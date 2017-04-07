@@ -1,0 +1,243 @@
+Last login: Sun Mar 19 19:37:57 on ttys003
+MacBook-Pro:~ matttawil$ ssh mtawil@kamek.ece.utexas.edu
+mtawil@kamek.ece.utexas.edu's password: 
+Last login: Sun Mar 19 19:35:16 2017 from cpe-67-11-189-14.satx.res.rr.com
+University of Texas at Austin Acceptable Use Policy
+
+Unauthorized use of UT Austin computer and networking resources is prohibited. 
+If you log on to this computer system, you acknowledge your awareness of 
+and concurrence with the UT Austin Acceptable Use Policy 
+(http://www.utexas.edu/vp/it/policies/aup/).
+The University will prosecute violators to the full extent of the law.
+
+Electrical and Computer Engineering
+The University of Texas at Austin
+http://www.ece.utexas.edu/it/
+help@ece.utexas.edu : 232-3383 : UTA 6.508
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+Please check the website daily at www.ece.utexas.edu/it for updates and news
+regarding the ECE computers.
+
+Do not edit your dotfiles. 
+Use 'module load $modulename' to load all necessary settings for our apps. 
+
+Check available modules for use via 'module avail'.
+
+Have environment issues?  Try a 'resetenv' before reporting a problem to 
+the ECE-IT help desk.
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+mtawil@kamek (~) % ls
+countOdd.asm  EE360C  EE422C  EE460N
+mtawil@kamek (~) % cd EE460N
+mtawil@kamek (/home/ecelrc/students/mtawil/EE460N) % ls
+Lab0  Lab1  Lab2  Lab3
+mtawil@kamek (/home/ecelrc/students/mtawil/EE460N) % cd Lab3
+mtawil@kamek (/home/ecelrc/students/mtawil/EE460N/Lab3) % cd Lab3
+mtawil@kamek (/home/ecelrc/students/mtawil/EE460N/Lab3/Lab3) % ls
+a.out    input.asm        isaprogram.txt  ucode3
+dumpsim  isaprogram1.txt  lc3bsim3.c      ucode3.txt
+mtawil@kamek (/home/ecelrc/students/mtawil/EE460N/Lab3/Lab3) % gcc -ansi lc3bsim3.c
+mtawil@kamek (/home/ecelrc/students/mtawil/EE460N/Lab3/Lab3) % ./a.out ucode3 isaprogram.txt
+LC-3b Simulator
+
+Loading Control Store from file: ucode3
+
+Read 36 words from program into memory.
+
+LC-3b-SIM> run 6
+
+Simulating for 6 cycles...
+
+LC-3b-SIM> rd
+
+
+Current register/bus values :
+-------------------------------------
+Cycle Count  : 6
+PC           : 0x3002
+IR           : 0x0000
+STATE_NUMBER : 0x0023
+
+BUS          : 0x0000
+MDR          : 0x5020
+MAR          : 0x3000
+CCs: N = 0  Z = 1  P = 0
+Registers:
+0: 0x0000
+1: 0x0000
+2: 0x0000
+3: 0x0000
+4: 0x0000
+5: 0x0000
+6: 0x0000
+7: 0x0000
+
+LC-3b-SIM> q
+
+Bye.
+mtawil@kamek (/home/ecelrc/students/mtawil/EE460N/Lab3/Lab3) % ssh grader.ece.utexas.edu
+mtawil@grader.ece.utexas.edu's password: 
+Last login: Sun Mar 19 19:47:14 2017 from kamek.ece.utexas.edu
+mtawil@grader (~) % submit-ee360n -ls
+2 files submitted:
+ 2303  ucode3
+31634  lc3bsim3.c
+mtawil@grader (~) % submit-ee360n lc3bsim3.c ucode3
+Opening lc3bsim3.c
+lc3bsim3.c: No such file or directory
+Opening ucode3
+ucode3: No such file or directory
+mtawil@grader (~) % ls
+countOdd.asm  EE360C  EE422C  EE460N
+mtawil@grader (~) % EE460N
+-bash: EE460N: command not found
+mtawil@grader (~) % cd EE460N
+mtawil@grader (/home/ecelrc/students/mtawil/EE460N) % ls
+Lab0  Lab1  Lab2  Lab3
+mtawil@grader (/home/ecelrc/students/mtawil/EE460N) % cd Lab3
+mtawil@grader (/home/ecelrc/students/mtawil/EE460N/Lab3) % ls
+Lab3
+mtawil@grader (/home/ecelrc/students/mtawil/EE460N/Lab3) % cd Lab3
+mtawil@grader (/home/ecelrc/students/mtawil/EE460N/Lab3/Lab3) % ls
+a.out    input.asm        isaprogram.txt  ucode3
+dumpsim  isaprogram1.txt  lc3bsim3.c      ucode3.txt
+mtawil@grader (/home/ecelrc/students/mtawil/EE460N/Lab3/Lab3) % submit-ee360n lc3bsim3.c ucode3
+Opening lc3bsim3.c
+EE460N: Computer Architecture, Spring 2017
+Programming Assignment 3
+
+Finished 'add' submission!
+Opening ucode3
+EE460N: Computer Architecture, Spring 2017
+Programming Assignment 3
+
+Finished 'add' submission!
+mtawil@grader (/home/ecelrc/students/mtawil/EE460N/Lab3/Lab3) % submit-ee360n -ls
+2 files submitted:
+ 2303  ucode3
+31603  lc3bsim3.c
+mtawil@grader (/home/ecelrc/students/mtawil/EE460N/Lab3/Lab3) % submit-ee360n -grade
+***** WARNING ***** WARNING ***** WARNING **** WARNING ******
+*** You are attempting to submit this for a grade!
+*** This action is irreversible and will determine your final grade.
+*** Are you sure you want to continue?
+*** TYPE 'Yes' TO CONTINUE
+*************************************************************
+Yes
+Submitting grade request!
+mtawil@grader (/home/ecelrc/students/mtawil/EE460N/Lab3/Lab3) % 
+Message from caproj@grader on <no tty> at 22:37 ...
+Auto-grader queue position: 1 out of 1
+EOF
+
+Message from caproj@grader on <no tty> at 22:37 ...
+Processing grade request for mtawil, attempt number 0
+EOF
+
+Message from caproj@grader on <no tty> at 22:37 ...
+------------------------
+Grading for mtawil
+------------------------
+An "x" in the "Incorrect" column indicates a test has failed
+
+=========================================================================
+Part A: Tests for individual states (1.25 points each)
+Each of these compares the result of rdump & mdump after run <n>
+where n is the value in column 3 below
+=========================================================================
+Name of     Instruction      Number of   Number of   Incorrect   Points
+Test Case                    Cycles      Differences             
+=========================================================================
+initial                      0           0                 (Not a test case)
+1           ADD R1,R2,R3     1           0                       1.25        
+2           ADD R1,R2,R3     6           0                       1.25        
+3           ADD R1,R2,R3     7           0                       1.25        
+4           ADD R1,R2,R3     8           0                       1.25        
+5           ADD R1,R2,R3     9           0                       1.25        
+6imm        ADD R1, R2, x5   9           0                       1.25        
+6ccn        ADD R1, R1, x-5  9           2              x        0.25        
+6ccz        ADD R1, R1, x-1  9           0                       1.25        
+7reg        AND R0, R5, R6   9           0                       1.25        
+7imm        AND R3, R2, xA   9           0                       1.25        
+8reg        XOR R1, R2, R3   9           0                       1.25        
+8imm        XOR R1, R2, xa   9           0                       1.25        
+8ccn        NOT R1, R1       9           0                       1.25        
+8ccp        NOT R7, R7       9           0                       1.25        
+9           TRAP x25         9           0                       1.25        
+10          TRAP x25         14          0                       1.25        
+11          TRAP x25         15          0                       1.25        
+12          STW R7, R6, #0   9           0                       1.25        
+13          STW R7, R6, #0   10          0                       1.25        
+14          STW R7, R6, #0   15          0                       1.25        
+15          STB R7, R6, #0   9           0                       1.25        
+16          STB R7, R6, #0   10          0                       1.25        
+17          STB R7, R6, #0   15          0                       1.25        
+18          STB R7, R6, #1   9           0                       1.25        
+19          STB R7, R6, #1   10          0                       1.25        
+20          STB R7, R6, #1   15          0                       1.25        
+21          LDW R0, R6, #0   9           0                       1.25        
+22          LDW R0, R6, #0   14          0                       1.25        
+23          LDW R0, R6, #0   15          0                       1.25        
+24          LDB R0, R6, #0   9           0                       1.25        
+25          LDB R0, R6, #0   14          0                       1.25        
+26          LDB R0, R6, #0   15          0                       1.25        
+27          LDB R0, R6, #1   9           0                       1.25        
+28          LDB R0, R6, #1   14          0                       1.25        
+29          LDB R0, R6, #1   15          2              x        0.25        
+30          LEA R2, label    9           0                       1.25        
+31          JMP R2           9           0                       1.25        
+32          JMP R2           10          0                       1.25        
+33          JSRR R2          9           0                       1.25        
+34          JSRR R2          10          0                       1.25        
+35          JSRR R2          11          0                       1.25        
+36          JSR  label       9           0                       1.25        
+37          JSR  label       10          0                       1.25        
+38          RET              9           0                       1.25        
+39          LSHF R2, R3,#4   9           0                       1.25        
+40          RSHFL R2, R6, #4 9           0                       1.25        
+41          RSHFA R2, R6, #4 9           0                       1.25        
+42          BRn label        10          0                       1.25        
+=========================================================================
+Part B: Tests for correct functionality of instructions(2.5 points each)
+=========================================================================
+Instruction     Number of       Incorrect       Points
+                Differences     
+=========================================================================
+add             0                               2.5             
+and             0                               2.5             
+br              0                               2.5             
+jmp             0                               2.5             
+jsr             0                               2.5             
+jsrr            0                               2.5             
+ldb             2                  x            1.5             
+ldw             0                               2.5             
+lea             0                               2.5             
+lshf            0                               2.5             
+rshfa           0                               2.5             
+rshfl           0                               2.5             
+stb             1                  x            2               
+stw             1                  x            2               
+trap            0                               2.5             
+xor             0                               2.5             
+=========================================================================
+Parts A and B - absolute points: 96 / 100
+Parts A and B - adjusted points: 77 / 80
+=========================================================================
+=========================================================================
+Part C: Microcode (-1 point per error)
+=========================================================================
+Error			Control Signal	Your Value	Correct Value
+=========================================================================
+
+=========================================================================
+Part C - points: 20 / 20
+=========================================================================
+=========================================================================
+Assignment 3: Total points 97 / 100
+=========================================================================
+EOF
+mtawil@grader (/home/ecelrc/students/mtawil/EE460N/Lab3/Lab3) % 
