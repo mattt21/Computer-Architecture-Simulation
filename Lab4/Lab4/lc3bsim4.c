@@ -65,6 +65,8 @@ enum CS_BITS {
     LD_REG,
     LD_CC,
     LD_PC,
+    LD_USP,  /*Load User Stack Pointer*/
+    LD_SSP,  /*Load Supervisor Stack Pointer*/
     GATE_PC,
     GATE_MDR,
     GATE_ALU,
@@ -82,6 +84,7 @@ enum CS_BITS {
     DATA_SIZE,
     LSHF1,
     /* MODIFY: you have to add all your new control signals */
+    
     CONTROL_STORE_BITS
 } CS_BITS;
 
@@ -966,3 +969,4 @@ void latch_datapath_values() {
      */       
     
 }
+
